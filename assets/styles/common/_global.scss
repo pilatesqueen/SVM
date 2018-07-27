@@ -1,0 +1,161 @@
+body {
+  overflow-x: hidden;
+  @include body-font;
+  font-size: 1.1rem;
+}
+@media(min-width:1224px){
+  body{
+    font-size: 1.2rem;
+  }
+
+}
+
+@media(min-width:1500px){
+  .container{
+    max-width: 1440px;
+  }
+}
+p {
+  line-height: 1.75;
+  margin-top:1rem;
+}
+
+a {
+  color: $primary;
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}
+.text-muted {
+  color: $gray-700 !important;
+}
+.red{
+  color: $primary;
+}
+.times{
+  @include serif-font;
+}
+.text-small{
+  font-size: 0.9rem;
+}
+.text-large{
+  p{
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  @include heading-font;
+}
+*,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+   transition: 0.3s ease-in-out;
+ }
+ .bg-primary{
+   background-color: $primary !important;
+   background-image: image();
+   background-repeat: repeat;
+   padding: 50px 0;
+   h2.inline-heading{
+     color: $white;
+     display: inline-block;
+     margin-bottom: 0;
+   }
+   .container-fluid{
+     max-width: 1500px;
+   }
+ }
+ .table td{
+   border-top: 1px solid $black;
+   border-bottom: 1px solid $black;
+ }
+.table-hover tbody tr:hover{
+  background-color: rgba($accent, 0.9);
+  color:$black;
+}
+
+:target:before {
+content:"";
+display:block;
+height:90px; /* fixed header height*/
+margin:-90px 0 0; /* negative fixed header height */
+}
+
+section {
+  padding: 20px 0;
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  h2.script-font{
+    @include script-font;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $white;
+  }
+  h3.section-subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 40px;
+    text-transform: none;
+    @include serif-font;
+  }
+}
+@media(min-width:768px) {
+  section {
+    padding: 25px 0;
+    h2.script-font{
+      font-size: 2.5rem;
+    }
+  }
+}
+// Highlight color customization
+::-moz-selection {
+  background: $primary;
+  text-shadow: none;
+  color: $white;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+  color: $white;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+img.round-text{
+  margin-right: 15px;
+  shape-outside: margin-box;
+  float: left;
+  width: 33%;
+  min-width:200px;
+}
+
+body {
+  -webkit-tap-highlight-color: $primary;
+}

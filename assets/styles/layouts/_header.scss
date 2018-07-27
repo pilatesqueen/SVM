@@ -1,0 +1,269 @@
+// Styling for the navbar
+.admin-bar{
+  /*adding offset for wp admin bar*/
+  .fixed-top, .topbar, .navbar-shrink
+  {
+    margin-top: 45px
+  }
+
+}
+.navbar-brand{
+  padding-bottom: 0;
+}
+
+.fixed-top {
+ position:fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding:15px;
+}
+.topbar{
+  color: $primary;
+  font-size:90%;
+  font-weight: 400;
+  background-color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  @include heading-font;
+  position: fixed;
+  z-index: 1040;
+  right: 0;
+  top: 0;
+}
+img.logo{
+  height:35px;
+  margin: 0.5em 0;
+}
+#mainNav {
+  background-color: white;
+  .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: $primary;
+    @include heading-font;
+  }
+  .navbar-brand {
+    padding-bottom: 0;
+    color: $primary;
+    @include script-font;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      &.dropdown{
+      .dropdown-menu {
+       display: block;
+       border: 0;
+       @include heading-font;
+       .nav-link{
+         font-size: 0.9rem;
+       }
+     }
+}
+      .nav-link {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        color: black;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        @include heading-font;
+        &.active,
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+@media(min-width:992px) {
+  .admin-bar{
+    .fixed-top, .topbar{
+      margin-top: 0;
+    }
+
+  }
+  .fixed-top{
+    position: -webkit-sticky;
+     position: -moz-sticky;
+     position: -ms-sticky;
+     position: -o-sticky;
+     position: sticky;
+  }
+  .topbar{
+    position: static;
+  }
+  img.logo{
+    height:55px;
+    margin: 0.75em 0;
+  }
+
+
+  #mainNav {
+    border: none;
+    background-color: $white;
+    box-shadow: 0 0.25em 0.35em 0 rgba(0,0,0,0.135);
+
+    .navbar-brand {
+      font-size: 1.75em;
+      margin-left: -15px;
+    }
+    .wpmenucart-display-standard{
+      padding: 0.75em 1em 0!important;
+      font-size: 1rem;
+    }
+    .navbar-nav {
+      .nav-item {
+        &.dropdown{
+    color: $primary;
+    .dropdown-menu {
+        margin-top: -5px;
+        display: none;
+        border-radius:0;
+        box-shadow: 0 0.25em 0.35em 0 rgba(0,0,0,0.135);
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        .dropdown-item{
+          padding-bottom: 0;
+          &:active{
+            background-color: $primary;
+          }
+        }
+      }
+    &:hover{
+      .dropdown-menu {
+          display: block;
+        }
+    }
+  }
+
+        .nav-link {
+          padding: 0.75em 1em;
+        }
+      }
+    }
+    &.navbar-shrink {
+      background-color: white;
+      border-bottom: 1px solid $gray-200;
+      box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,.135);
+      height: 60px;
+      .navbar-brand {
+        transform: scale(0.6) translateX(-80px);
+        padding: 6px 0;
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            font-size: 0.9rem;
+            padding: 1em 1em  0!important;
+          }
+        }
+      }
+      .wpmenucart-display-standard{
+        font-size: 0.9rem;
+        padding: 1em 1em  0!important;
+      }
+    }
+  }
+}
+
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  margin: auto;
+  @include background-cover;
+  .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    .intro-heading {
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 3rem;
+      margin-bottom: 25px;
+      color: $white;
+      @include heading-font;
+      h1{
+        background-color: rgba($primary, 0.7);
+        padding: 5px 10px;
+        font-weight: 400;
+        display: inline;
+        font-size: 1.7rem;
+        -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+      }
+      .text-display{
+        @include script-font;
+        color: $black;
+      }
+    }
+  }
+}
+@media(min-width:768px) {
+  header.masthead {
+    padding-top: 0;
+    padding-bottom: 0;
+    .intro-text {
+      width: 53%;
+      margin-left: -15px;
+      text-align: left;
+      background-color: rgba($primary, 0.7);
+      .intro-heading {
+        color: $white;
+        font-weight: 400;
+        line-height: 60px;
+        margin-bottom: 20px;
+        padding: 20px;
+        @include heading-font;
+        h1{
+          background-color: transparent;
+          font-size: 2.5rem;
+        }
+        .text-display{
+          @include script-font;
+        }
+      }
+      .btn-primary{
+      }
+    }
+  }
+}
+@media(min-width:1200px){
+  header.masthead {
+    height: 80vh;
+    min-height: 450px;
+    background-attachment: fixed;
+    .intro-text {
+      height: 80vh;
+      min-height: 450px;
+      position: absolute;
+        .intro-heading{
+          position: absolute;
+          top:50%;
+          transform: translateY(-50%);
+          padding: 0 100px;
+          h1{
+            background-color: transparent;
+            font-size: 3rem;
+          }
+        }
+    }
+  }
+}

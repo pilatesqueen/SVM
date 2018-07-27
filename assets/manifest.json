@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "./../node_modules/bootstrap/dist/js/bootstrap.js",
+        "scripts/main.js"
+      ]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "files": [
+        "./../node_modules/jquery/dist/jquery.js"
+      ]
+    },
+    "jquery-easing.js": {
+      "files": [
+        "./../node_modules/jquery-easing/jquery.easing.1.3.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://svm.localhost.com"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "svm",
+  "homepage": "https://roots.io/svm/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true
+}

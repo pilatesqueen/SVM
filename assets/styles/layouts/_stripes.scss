@@ -1,0 +1,84 @@
+// Styling for the testimonials and 3 column moto sections
+
+h3.testimonial-heading {
+
+ margin-top: 1rem 0 1rem;
+ margin-bottom: 0;
+ text-transform: none;
+ font-weight: 700;
+ font-size: 2rem;
+ @include heading-font;
+}
+h4.testimonial-heading {
+
+  margin-top: 1rem 0 1rem;
+  margin-bottom: 0;
+  text-transform: none;
+  font-weight: 800;
+  font-size: 3.5rem;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  @include heading-font;
+}
+p.testimonial-heading{
+  color: $primary;
+  text-transform: uppercase;
+  @include heading-font;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: -1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width:768px){
+  h4.testimonial-heading {
+    font-size: 4.5rem;
+    padding-right: 4rem;
+  }
+  p.testimonial-heading{
+    font-size: 3rem;
+    margin-top: -2rem;
+    padding-right: 3rem;
+  }
+  #testimonials{
+    .text-muted{
+      padding:0 1rem;
+    }
+  }
+}
+@media (min-width:1224px){
+  #testimonials{
+    .text-muted{
+      padding:0 2rem;
+    }
+}
+}
+
+.specials{
+  .col-img{
+    max-height:500px;
+    overflow:hidden;
+    @media(min-width: 600px){
+    .crop-bottom{
+      margin-top: -50%;
+    }
+  }
+  }
+  @media (min-width: 992px){
+    .col-img{
+      max-height:1000px;
+      overflow:hidden;
+      .crop-bottom{
+        margin-top: 0;
+      }
+    }
+  }
+  @media (min-width: 1400px){
+    .col-img{
+      max-height:800px;
+      overflow:hidden;
+      .crop-bottom{
+        margin-top: -50%;
+      }
+    }
+  }
+}
